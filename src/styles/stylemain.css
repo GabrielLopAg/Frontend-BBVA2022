@@ -7,12 +7,29 @@
 }
 .text{
     grid-column: 2/9;
-    grid-row: 5/12;
+    grid-row: 4/8;
 }
-
+.text2{
+    grid-column: 2/9;
+    grid-row: 8/11;
+}
 .upload{
     grid-column: 2/9;
-    grid-row: 12/12;
+    grid-row: 13/14;
     box-shadow: -1px -1px 7px 0px rgba(105,105,105,0.75);
     border-radius: 2rem;
+}
+.cancel{
+    grid-column: 7/9;
+    grid-row: 15/16;
+    
+}
+.send{
+    grid-column: 2/6;
+    grid-row: 15/16;
+}
+.progress{
+    grid-column: 1/21;
+    grid-row: 20/21;
+    width: 100%;
 }

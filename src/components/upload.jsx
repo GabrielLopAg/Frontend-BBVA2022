@@ -7,13 +7,13 @@ export default function CustomizedInputBase() {
   return (
     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 422, borderRadius: '2rem' }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%', borderRadius: '2rem' }}
     >
       <IconButton sx={{ p: '10px' }} aria-label="menu">
-        <CloudUploadIcon/>
-      </IconButton>
+        <CloudUploadIcon sx={{color: '#028484' }}/>
+      </IconButton >
       <InputBase
-        sx={{ ml: 1, flex: 1 }}
+        sx={{ ml: 1, flex: 1}}
         placeholder="Link del archivo"
         inputProps={{ 'aria-label': 'Link' }}
       />
