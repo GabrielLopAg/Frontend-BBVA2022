@@ -1,0 +1,18 @@
+.container2{
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns:repeat(20, 1fr);
+   grid-template-rows: repeat(20, 1fr);
+}
+.text{
+    grid-column: 2/9;
+    grid-row: 5/12;
+}
+
+.upload{
+    grid-column: 2/9;
+    grid-row: 12/12;
+    box-shadow: -1px -1px 7px 0px rgba(105,105,105,0.75);
+    border-radius: 2rem;
+}
