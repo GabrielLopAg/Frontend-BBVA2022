@@ -1,18 +1,18 @@
-import './App.css';
+import './styles/styleGrid.css';
 import AppNav from './components/AppNav';
 import ComplexGrid from './components/main'
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 function App() {
   return (
-    <Grid spacing={50} columns={16}>
-    <Grid item xs={8}>
+    <Box className='container'>
+    <Grid className='item item1'>
     <AppNav/>
     </Grid>
-    <Grid  item xs={8} >
+    <Grid className='item item2'>
     <ComplexGrid/>
     </Grid>
-    </Grid>
+    </Box>
   );
 }
 
