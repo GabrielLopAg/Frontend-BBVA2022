@@ -28,8 +28,38 @@
     grid-column: 2/6;
     grid-row: 15/16;
 }
-.progress{
-    grid-column: 1/21;
-    grid-row: 20/21;
-    width: 100%;
+.video{
+    grid-column: 12/21;
+    grid-row: 5/19;
+    width: 80%;
 }
+ @media(max-width: 800px){
+    .text{
+        grid-column: 2/21;
+        grid-row: 5/9;
+    }
+    .text2{
+        grid-column: 1/21;
+        grid-row: 9/14;
+    }
+    .upload{
+        grid-column: 2/19;
+        grid-row: 15;
+        box-shadow: -1px -1px 7px 0px rgba(105,105,105,0.75);
+        border-radius: 2rem;
+    }
+    .cancel{
+        grid-column: 13/19;
+        grid-row: 17;
+        
+    }
+    .send{
+        grid-column: 2/12;
+        grid-row: 17;
+    }
+    .video{
+        grid-column: 5/20;
+        grid-row: 1/4;
+        width: 80%;
+    }
+ }

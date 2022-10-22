@@ -1,0 +1,9 @@
+.table{
+    display: grid;
+    grid-template-columns:repeat(20, 1fr);
+    grid-template-rows: 90px 750px 5% ;
+}
+.datos{
+    grid-column: 1/21;
+    grid-row: 2;
+}

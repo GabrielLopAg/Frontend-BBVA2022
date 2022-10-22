@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Imagen from "../img/score.png";
 import '../styles/stylemain.css';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -9,7 +8,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { styled } from '@mui/material/styles';
-
+import graficas from '../video/graficas.mp4';
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText('#1973b8'),
   backgroundColor: '#028484',
@@ -56,6 +55,9 @@ export default function ComplexGrid() {
       >
         Process
       </LoadingButton>
+      <video autoPlay loop muted className='video'>
+      <source src={graficas} type="video/mp4"/>
+      </video>
     </div>
   );
 }

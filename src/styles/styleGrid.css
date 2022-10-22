@@ -1,7 +1,7 @@
 .container{
     display: grid;
     grid-template-columns:repeat(20, 1fr);
-    grid-template-rows: 90px 400px 350px 5% 5%;
+    grid-template-rows: 90px 400px 350px 5% 5% 5% 5% 1000px;
 }
 
 
@@ -12,4 +12,13 @@
 .item3{
     grid-column: 2/20;
     grid-row: 4/5;
+}
+.item4{
+    grid-column: 2/20;
+    grid-row: 8;
+}
+.progress{
+    grid-column: 1/21;
+    grid-row: 20/21;
+    width: 100%;
 }

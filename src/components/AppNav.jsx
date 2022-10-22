@@ -26,7 +26,7 @@ export default class AppNav extends Component{
                         </Typography> 
                     </Grid>
                     <Grid item xs={12} sm container></Grid>
-                        <Button variant="contained" style={bttn}>Contained</Button>
+                        <Button variant="contained" style={bttn} href= '#inicio'>Main</Button>
                     </Toolbar>
                 </AppBar>
             </Grid>
