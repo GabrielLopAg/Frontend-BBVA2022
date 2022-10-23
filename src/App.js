@@ -6,10 +6,10 @@ import Box from '@mui/material/Box';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import IconButton from '@mui/material/IconButton';
 import DataTable from './components/table';
-import { withAuthenticator } from '@aws-amplify/ui-react'
 
 
-function App() {
+
+export default function App() {
 
 
   return (
@@ -35,5 +35,3 @@ function App() {
     </>
   );
 }
-
-export default withAuthenticator(App);

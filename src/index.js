@@ -3,22 +3,36 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Amplify from 'aws-amplify';
-import config from './aws-exports';
+import Amplify, { API } from 'aws-amplify';
+// Amplify.configure(config);
+console.log("test");
+Amplify.configure({
+  // Auth: {
+  //   identityPoolId: 'us-east-2:8e01621b-7487-4447-b9ce-ea1b8a183a9d',
+  //   region: 'US-EAST-2'
+  // },
+  // // Storage: {
+  //   AWSS3: {
+  //     bucket: 'serverless-dataset-storage',
+  //     region: 'US-EAST-2'
+  //   }
+  // },
+  API: {
+    endpoints: [
+      {
+        name: "serverless-fastapi",
+        endpoint: "https://doooxtxfjc.execute-api.us-east-2.amazonaws.com/dev/"
+      }
+    ]
+  }
+});
+console.log("test2");
 
-Amplify.configure(config);
-// Amplify.configure({
-//   Auth: {
-//     identityPoolId: 'us-east-2:8e01621b-7487-4447-b9ce-ea1b8a183a9d',
-//     region: 'US-EAST-2'
-//   },
-//   Storage: {
-//     AWSS3: {
-//       bucket: 'serverless-dataset-storage',
-//       region: 'US-EAST-2'
-//     }
-//   }
-// });
+
+
+API.configure();
+console.log("test3");
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

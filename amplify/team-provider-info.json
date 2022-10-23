@@ -12,9 +12,6 @@
       "AmplifyAppId": "d3plss1q0v8rjk"
     },
     "categories": {
-      "auth": {
-        "amplifyuser8dd5128f": {}
-      },
       "hosting": {
         "S3AndCloudFront": {}
       },

@@ -9,8 +9,60 @@ import SendIcon from '@mui/icons-material/Send';
 import LoadingButton from '@mui/lab/LoadingButton';
 import graficas from '../video/graficas.mp4';
 import PublishIcon from '@mui/icons-material/Publish';
-import { Storage } from "aws-amplify";
+import { Storage, API } from "aws-amplify";
 import { useState } from "react";
+// import config from './aws-exports';
+import Amplify from 'aws-amplify';
+
+// async function postData() {
+//   const apiName = 'https://doooxtxfjc.execute-api.us-east-2.amazonaws.com/dev/';
+//   const path = '';
+//   const myInit = {
+//     body: {}, // replace this with attributes you need
+//     headers: {} // OPTIONAL
+//   };
+//   const result = API.post(apiName, path, myInit);
+//   console.log(result);
+//   return await result;
+// }
+
+// postData();
+
+// PETICION GET
+function getData() {
+  const apiName = 'serverless-fastapi';
+  const path = '';
+  const myInit = {
+    headers: {} // OPTIONAL
+  };
+  Amplify.configure({
+    // Auth: {
+    //   identityPoolId: 'us-east-2:8e01621b-7487-4447-b9ce-ea1b8a183a9d',
+    //   region: 'US-EAST-2'
+    // },
+    // // Storage: {
+    //   AWSS3: {
+    //     bucket: 'serverless-dataset-storage',
+    //     region: 'US-EAST-2'
+    //   }
+    // },
+    API: {
+      endpoints: [
+        {
+          name: "serverless-fastapi",
+          endpoint: "https://doooxtxfjc.execute-api.us-east-2.amazonaws.com/dev/"
+        }
+      ]
+    }
+  });
+  return API.get(apiName, path, myInit);
+}
+
+(async function() {
+  const response = await getData();
+  console.log(response);
+})();
+
 export default function ComplexGrid() {
   const [loading, setLoading] = React.useState(false);
   function handleClick() {
@@ -53,7 +105,7 @@ export default function ComplexGrid() {
        onClick={uploadFile}>{fileStatus ? "Archivo cargado correctamente" : ""}
       </Button>
       <LoadingButton
-        onClick={uploadFile}
+        onClick={uploadFile, getData}
         endIcon={<SendIcon />}
         variant="contained"
         className='send'
