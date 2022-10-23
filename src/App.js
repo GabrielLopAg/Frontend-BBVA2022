@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import IconButton from '@mui/material/IconButton';
 import DataTable from './components/table';
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import { withAuthenticator} from '@aws-amplify/ui-react'
 
 function App() {
   return (
