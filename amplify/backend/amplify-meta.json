@@ -1,0 +1,56 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyuser-dev-212046-authRole",
+      "UnauthRoleArn": "arn:aws:iam::476218983263:role/amplify-amplifyuser-dev-212046-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::476218983263:role/amplify-amplifyuser-dev-212046-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifyuser-dev-212046-deployment",
+      "UnauthRoleName": "amplify-amplifyuser-dev-212046-unauthRole",
+      "StackName": "amplify-amplifyuser-dev-212046",
+      "StackId": "arn:aws:cloudformation:us-east-1:476218983263:stack/amplify-amplifyuser-dev-212046/4fb70bb0-5279-11ed-b885-12d4089cefb1",
+      "AmplifyAppId": "d3plss1q0v8rjk"
+    }
+  },
+  "auth": {
+    "amplifyuser8dd5128f": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_jdWKIS1qd",
+        "AppClientIDWeb": "28jar0851r1st3theulfrc6rb0",
+        "AppClientID": "6lv2a0nscfbvv3a17bgv73r16u",
+        "IdentityPoolId": "us-east-1:23b5a5a0-baab-40b5-81ee-072995ca0cf7",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:476218983263:userpool/us-east-1_jdWKIS1qd",
+        "IdentityPoolName": "amplifyuser8dd5128f_identitypool_8dd5128f__dev",
+        "UserPoolName": "amplifyuser8dd5128f_userpool_8dd5128f"
+      },
+      "lastPushTimeStamp": "2022-10-23T03:59:44.163Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyuser-dev-212046-deployment/amplify-cfn-templates/auth/amplifyuser8dd5128f-cloudformation-template.json",
+        "logicalId": "authamplifyuser8dd5128f"
+      },
+      "lastPushDirHash": "VTGnBptZapTeboHgAM8EUNtAKYM="
+    }
+  }
+}
