@@ -17,5 +17,11 @@ export type AmplifyDependentResourcesAttributes = {
             "WebsiteURL": "string",
             "S3BucketSecureURL": "string"
         }
+    },
+    "storage": {
+        "datasetStorage": {
+            "BucketName": "string",
+            "Region": "string"
+        }
     }
 }

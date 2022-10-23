@@ -45,7 +45,7 @@
         "IdentityPoolName": "amplifyuser8dd5128f_identitypool_8dd5128f__dev",
         "UserPoolName": "amplifyuser8dd5128f_userpool_8dd5128f"
       },
-      "lastPushTimeStamp": "2022-10-23T04:36:30.793Z",
+      "lastPushTimeStamp": "2022-10-23T09:36:50.430Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyuser-dev-212046-deployment/amplify-cfn-templates/auth/amplifyuser8dd5128f-cloudformation-template.json",
         "logicalId": "authamplifyuser8dd5128f"
@@ -61,7 +61,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyuser-dev-212046-deployment/amplify-cfn-templates/hosting/template.json",
         "logicalId": "hostingS3AndCloudFront"
       },
-      "lastPushTimeStamp": "2022-10-23T04:36:31.198Z",
+      "lastPushTimeStamp": "2022-10-23T09:36:50.436Z",
       "output": {
         "S3BucketSecureURL": "https://amplifyuser-20221022233347-hostingbucket-dev.s3.amazonaws.com",
         "WebsiteURL": "http://amplifyuser-20221022233347-hostingbucket-dev.s3-website-us-east-1.amazonaws.com",
@@ -69,6 +69,23 @@
         "HostingBucketName": "amplifyuser-20221022233347-hostingbucket-dev"
       },
       "lastPushDirHash": "olvCTvIKluZGvj14ShRJMpzI1Gc="
+    }
+  },
+  "storage": {
+    "datasetStorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2022-10-23T09:36:50.831Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyuser-dev-212046-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storagedatasetStorage"
+      },
+      "output": {
+        "BucketName": "amplify-storage-dataset212046-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushDirHash": "JnP3KbizLd89qBQ2v7WCvtwZadA="
     }
   }
 }

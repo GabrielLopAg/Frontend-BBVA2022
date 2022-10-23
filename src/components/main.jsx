@@ -8,11 +8,25 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import LoadingButton from '@mui/lab/LoadingButton';
 import graficas from '../video/graficas.mp4';
+import PublishIcon from '@mui/icons-material/Publish';
+import { Storage } from "aws-amplify";
+import { useState } from "react";
 export default function ComplexGrid() {
   const [loading, setLoading] = React.useState(false);
   function handleClick() {
     setLoading(true);
   }
+  const [fileData, setFileData] = useState();
+  const [fileStatus, setFileStatus] = useState(false);
+
+  const uploadFile = async () => {
+    const result = await Storage.put(fileData.name, fileData, {
+      contentType: fileData.type,
+    });
+    setFileStatus(true);
+    console.log(21, result);
+  };
+
   return (
     <div className='container2'>
       <Box className='text'>
@@ -31,25 +45,26 @@ export default function ComplexGrid() {
         </Typography>
       </Box>
       <Box className='upload'>
-        <input type='file'/>
+      <input type="file" onChange={(e) => setFileData(e.target.files[0])} />
+      {fileStatus ? "Archivo cargado correctamente" : ""}
+
       </Box>
-      <Button variant="outlined" startIcon={<DeleteIcon />} color="error" className='cancel' hecked={loading}
-        onClick={() => setLoading(!loading)}>
-        Cancel
+      <Button variant="disabled" startIcon={<PublishIcon />} color="error" className='cancel' hecked={fileStatus}
+       onClick={uploadFile}>{fileStatus ? "Archivo cargado correctamente" : ""}
       </Button>
       <LoadingButton
-        onClick={handleClick}
+        onClick={uploadFile}
         endIcon={<SendIcon />}
-        loading={loading}
-        loadingPosition="end"
         variant="contained"
         className='send'
       >
-        Process
+        Cargar archivo
       </LoadingButton>
       <video autoPlay loop muted className='video'>
       <source src={graficas} type="video/mp4"/>
       </video>
+      
     </div>
+    
   );
 }

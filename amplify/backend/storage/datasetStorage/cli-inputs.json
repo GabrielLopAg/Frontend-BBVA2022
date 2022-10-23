@@ -1,0 +1,12 @@
+{
+  "resourceName": "datasetStorage",
+  "policyUUID": "80bd24fe",
+  "bucketName": "amplify-storage-dataset",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
