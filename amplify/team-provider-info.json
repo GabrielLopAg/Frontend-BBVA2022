@@ -19,7 +19,10 @@
         "S3AndCloudFront": {}
       },
       "storage": {
-        "datasetStorage": {}
+        "amplifyuseree58d2e8": {
+          "bucketName": "serverless-dataset-storage",
+          "region": "us-east-2"
+        }
       }
     }
   }

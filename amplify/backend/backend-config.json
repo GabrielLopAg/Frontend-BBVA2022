@@ -32,8 +32,9 @@
     }
   },
   "storage": {
-    "datasetStorage": {
+    "amplifyuseree58d2e8": {
       "service": "S3",
+      "serviceType": "imported",
       "providerPlugin": "awscloudformation",
       "dependsOn": []
     }

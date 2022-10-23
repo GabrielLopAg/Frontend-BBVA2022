@@ -7,6 +7,19 @@ import Amplify from 'aws-amplify';
 import config from './aws-exports';
 
 Amplify.configure(config);
+// Amplify.configure({
+//   Auth: {
+//     identityPoolId: 'us-east-2:8e01621b-7487-4447-b9ce-ea1b8a183a9d',
+//     region: 'US-EAST-2'
+//   },
+//   Storage: {
+//     AWSS3: {
+//       bucket: 'serverless-dataset-storage',
+//       region: 'US-EAST-2'
+//     }
+//   }
+// });
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
